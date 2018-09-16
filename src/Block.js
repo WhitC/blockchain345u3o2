@@ -4,12 +4,34 @@ class Block extends Component {
   render() {
     const { index, timestamp, data, prevHash, thisHash } = this.props;
     return (
-      <div className="block flex card">
-        <p>Index: {index}</p>
-        <p>Created at: {timestamp.split('T')[0]}</p>
-        <p>Data: {data}</p>
-        <p>Prev Hash: {prevHash}</p>
-        <p>Hash: {thisHash}</p>
+      <div className="flex card">
+        <div className="card-head flex">
+          <div className="inner-bounds">
+            <p className="title">Block #</p>
+            <p className="data">{index}</p>
+          </div>
+        </div>
+        <div className="inner-bounds">
+          <div className="data-group">
+            <p className="title">Created at</p>
+            <p className="data">{timestamp.split('T')[0]}</p>
+          </div>
+          {/* */}
+          <div className="data-group">
+            <p className="title">Data</p>
+            <p className="data">{data}</p>
+          </div>
+          {/* */}
+          <div className="data-group">
+            <p className="title">Prev Hash</p>
+            <p className="data hash">{prevHash}</p>
+          </div>
+          {/* */}
+          <div className="data-group">
+            <p className="title">Hash</p>
+            <p className="data hash">{thisHash}</p>
+          </div>
+        </div>
       </div>
     );
   }
