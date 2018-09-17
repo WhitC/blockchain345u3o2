@@ -10,6 +10,7 @@ node_modules
 
 # production
 /build
+Planning.md
 
 # misc
 .DS_Store
