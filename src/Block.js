@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Block extends Component {
   render() {
@@ -36,5 +37,13 @@ class Block extends Component {
     );
   }
 }
+
+Block.propTypes = {
+  index: PropTypes.integer,
+  timestamp: PropTypes.integer,
+  data: PropTypes.string,
+  prevHash: PropTypes.string,
+  thisHash: PropTypes.string
+};
 
 export default Block;
