@@ -14,7 +14,7 @@ class Block extends Component {
         <div className="inner-bounds">
           <div className="data-group">
             <p className="title">Created at</p>
-            <p className="data">{timestamp.split('T')[0]}</p>
+            <p className="data">{timestamp}</p>
           </div>
           {/* */}
           <div className="data-group">
